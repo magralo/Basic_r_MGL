@@ -3,6 +3,11 @@ title: "R: A brief history of the three years old me (introduction) "
 author: "Mateo Graciano"
 output: html_document
 ---
+---
+title: "R: A brief history of the three years old me (introduction) "
+author: "Mateo Graciano"
+output: ioslides_presentation
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -788,6 +793,28 @@ I use the function gather from the package tidyr.
 g
 ```
 
+
+## Facet wrap
+
+This is one of my favorites functions that we can use in ggplot. Have you ever wanted to make the same plot but separating groups?
+```{r, echo=FALSE}
+iris%>%
+  ggplot(aes(Sepal.Length ,Sepal.Width))+
+  geom_point()+
+  facet_wrap(~Species)
+```
+## Hands on!
+
+Let's make one histogram per species of the Sepal.Length. (Fill it according to its group is a plus)
+
+## One Solution
+
+```{r, echo=FALSE}
+iris%>%
+  ggplot(aes(Sepal.Length ,fill=Species))+
+  geom_histogram()+
+  facet_wrap(~Species)
+```
 
 ## An amazing partner!!
 
