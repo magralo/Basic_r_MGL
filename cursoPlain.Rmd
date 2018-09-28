@@ -984,7 +984,9 @@ ggplot(tabla,aes(x=1,y=Weight,fill=Company))+geom_bar(stat = "identity")+ coord_
 
 ## How can we see our answer?
 ```{r, echo=TRUE}
-ggplot(tabla,aes(x=1,y=Weight,fill=Company))+geom_bar(stat = "identity")+ coord_polar(theta="y") 
+ggplot(tabla,aes(x=1,y=Weight,fill=Company))+
+  geom_bar(stat = "identity")+ 
+  coord_polar(theta="y") 
 ```
 
 
