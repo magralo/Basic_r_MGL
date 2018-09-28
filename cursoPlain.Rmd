@@ -797,7 +797,7 @@ g
 ## Facet wrap
 
 This is one of my favorites functions that we can use in ggplot. Have you ever wanted to make the same plot but separating groups?
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 iris%>%
   ggplot(aes(Sepal.Length ,Sepal.Width))+
   geom_point()+
@@ -809,7 +809,7 @@ Let's make one histogram per species of the Sepal.Length. (Fill it according to 
 
 ## One Solution
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 iris%>%
   ggplot(aes(Sepal.Length ,fill=Species))+
   geom_histogram()+
@@ -820,7 +820,7 @@ iris%>%
 
 Let's try to see how does plotly works!, with this package i made the following plot:
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
 
 ggplotly()
 ```
